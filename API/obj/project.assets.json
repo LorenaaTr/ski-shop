@@ -2948,11 +2948,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\ReStore\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Admin\\ReStore\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\ReStore\\API\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
