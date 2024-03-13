@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bGYUgTTsshL5lvnnYCjnIyXRo/M6xZvK1xX8sdYyRcEWhPVsIBJMJE3sRFqLh8poqzc/e17FupebW/XyxpPnWQ==",
+  "dgSpecHash": "OGhqygcH0NafZYz8+rd0Nv5aJ4GNJyRGRaqDfGMLUnvUYgSlHiWKuwCaWbKTC4F5LM1Gq1z2fGNLIBIaujYZng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\ReStore\\ski-shop\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
