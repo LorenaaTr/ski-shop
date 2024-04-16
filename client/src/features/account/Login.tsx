@@ -1,6 +1,6 @@
 import Avatar from '@mui/material/Avatar';
 import TextField from '@mui/material/TextField';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -16,14 +16,19 @@ import { signInUser } from './accountSlice';
 
 export default function Login() {
     const navigate = useNavigate();
+    const location = useLocation();
     const dispatch = useAppDispatch();
     const { register, handleSubmit, formState: {isSubmitting, errors, isValid}} = useForm({
       mode: 'onTouched'
     });
     
     async function submitForm(data: FieldValues) {  
+       try {
         await dispatch(signInUser(data));
-        navigate('/catalog');
+        navigate(location.state?.from || '/catalog');
+       } catch (error) {
+          console.log(error);
+       }
     }
 
   return (
@@ -36,7 +41,9 @@ export default function Login() {
           <Typography component="h1" variant="h5">
             Log in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit(submitForm)} noValidate sx={{ mt: 1 }}>
+          <Box component="form" 
+          onSubmit={handleSubmit(submitForm)}
+           noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               fullWidth
