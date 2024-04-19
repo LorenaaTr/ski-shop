@@ -22,6 +22,7 @@ export default function Orders(){
 
     if (selectedOrderNumber > 0) return (
       <OrderDetails
+         // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
           order={orders?.find(o => o.id === selectedOrderNumber)!}
           setSelectedOrder={setSelectedOrderNumber}
       />
