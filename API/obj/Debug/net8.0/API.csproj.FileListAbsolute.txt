@@ -185,3 +185,6 @@ C:\Users\Admin\ReStore\ski-shop\API\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Sy
 C:\Users\Admin\ReStore\ski-shop\API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Admin\ReStore\ski-shop\API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Admin\ReStore\ski-shop\API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Admin\ReStore\ski-shop\API\bin\Debug\net8.0\API.staticwebassets.runtime.json
+C:\Users\Admin\ReStore\ski-shop\API\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Admin\ReStore\ski-shop\API\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
