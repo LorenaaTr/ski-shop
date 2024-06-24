@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\API.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\ReStore\\ski-shop\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\API.csproj": {
+    "C:\\Users\\Admin\\Desktop\\ReStore\\ski-shop\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\ReStore\\ski-shop\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\ReStore\\ski-shop\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\ReStore\\ski-shop\\API\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\ReStore\\ski-shop\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,6 +64,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.2, )"
             },
