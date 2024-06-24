@@ -5,6 +5,7 @@ import { useAppSelector } from "../store/configureStore";
 import SignedInMenu from "./SignedInMenu";
 
 const midLinks = [
+    {title: 'home', path: '/'},
     {title: 'catalog', path: '/catalog'},
     {title: 'about', path: '/about'},
     {title: 'contact', path: '/contact'},
@@ -63,22 +64,8 @@ export default function Header({darkMode, handleThemeChange} : Props){
                             {title.toUpperCase()}
                         </ListItem>
                         ))}
-                         {user && user.roles?.includes('Admin') && 
-                        <ListItem
-                            component={NavLink}
-                            to={'/Users'}
-                            sx={navStyles}
-                        >
-                            USERS
-                        </ListItem>}
-                        {user && user.roles?.includes('Admin') && 
-                        <ListItem
-                            component={NavLink}
-                            to={'/inventory'}
-                            sx={navStyles}
-                        >
-                            INVENTORY
-                        </ListItem>}
+                         
+                       
                        
                     </List>
                 </Box>

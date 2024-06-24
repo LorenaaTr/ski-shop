@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Slider from "react-slick";
+import Footer from "../../app/layout/Footer";
 
 export default function HomePage(){
     const settings = {
@@ -28,6 +29,7 @@ export default function HomePage(){
                 Welcome to the Shop!
             </Typography>
         </Box>
+        <Footer/>
         </>
     )
 }
