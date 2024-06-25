@@ -1,6 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { TextField, Button, Grid, Typography, Paper } from '@mui/material';
-import Footer from '../../app/layout/Footer';
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -84,7 +83,6 @@ const ContactPage = () => {
                         </Paper>
                     </Grid>
                 </Grid>
-                <Footer/>
             </>
     );
 };

@@ -1,4 +1,4 @@
-import { Container, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import { Container, CssBaseline, ThemeProvider, createTheme, Box } from "@mui/material";
 import Header from "./Header";
 import { useCallback, useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
@@ -9,6 +9,7 @@ import { useAppDispatch } from "../store/configureStore";
 import { fetchBasketAsync } from "../../features/basket/basketSlice";
 import { fetchCurrentUser } from "../../features/account/accountSlice";
 import HomePage from "../../features/home/HomePage";
+import Footer from "./Footer"; // Import the Footer component
 
 function App() {
   const location = useLocation();
@@ -16,17 +17,17 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const initApp = useCallback(async () => {
-    try{
+    try {
       await dispatch(fetchCurrentUser());
-      await dispatch(fetchBasketAsync()); 
-    } catch (error){
+      await dispatch(fetchBasketAsync());
+    } catch (error) {
       console.log(error);
     }
-  }, [dispatch])
+  }, [dispatch]);
 
   useEffect(() => {
-     initApp().then(() => setLoading(false));
-  }, [initApp])
+    initApp().then(() => setLoading(false));
+  }, [initApp]);
 
   const [darkMode, setDarkMode] = useState(false);
   const paletteType = darkMode ? 'dark' : 'light';
@@ -34,29 +35,34 @@ function App() {
     palette: {
       mode: paletteType,
       background: {
-        default: paletteType === 'light' ? '#eaeaea' : '#121212'
-      }
-    }
-  })
+        default: paletteType === 'light' ? '#eaeaea' : '#121212',
+      },
+    },
+  });
 
-  function handleThemeChange(){
+  function handleThemeChange() {
     setDarkMode(!darkMode);
   }
 
   return (
     <ThemeProvider theme={theme}>
-      <ToastContainer position="bottom-right" hideProgressBar theme="colored"/>
-      <CssBaseline/>
-      <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
-      {loading ?  <LoadingComponent message="Initialising app..." />
-        : location.pathname === '/' ? <HomePage/>
-        :  <Container sx={{mt: 4}}>
+      <ToastContainer position="bottom-right" hideProgressBar theme="colored" />
+      <CssBaseline />
+      <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
+      {loading ? (
+        <LoadingComponent message="Initializing app..." />
+      ) : location.pathname === '/' ? (
+        <HomePage />
+      ) : (
+        <Box display="flex" flexDirection="column" minHeight="100vh">
+          <Container sx={{ flex: 1, mt: 4 }}>
             <Outlet />
-            </Container>
-      }
-     
+          </Container>
+          <Footer />
+        </Box>
+      )}
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

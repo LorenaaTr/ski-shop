@@ -8,7 +8,6 @@ import RadioButtonGroup from "../../app/components/RadioButtonGroup";
 import CheckboxButtons from "../../app/components/CheckboxButtons";
 import AppPagination from "../../app/components/AppPagination";
 import useProducts from "../../app/hooks/useProducts";
-import Footer from "../../app/layout/Footer";
 
 const sortOptions = [
     {value: 'name', label: 'Alphabetical'},
@@ -70,7 +69,6 @@ export default function Catalog(){
                 />}
             </Grid>
         </Grid>
-        <Footer/>
        </>
     )
 }
